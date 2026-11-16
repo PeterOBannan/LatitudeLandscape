@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We're Hiring - Latitude Landscaping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="service-banner">Proudly serving the Inland Northwest and Arizona.</div>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Latitude Landscaping &amp; Irrigation" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="hiring.html">We're Hiring!</a></li>
+                <li><a href="ideas.html">Ideas to Life</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container grid-2">
+        <div>
+            <img src="images/team-culture.png" alt="Latitude Landscaping team and culture" class="section-image" style="margin-bottom: 1.5rem;">
+            <h1>Build Your Career With Us</h1>
+            <p>Latitude Landscaping is committed to creating a flexible, growth-oriented environment for our team. We don't just build landscapes; we build people. We offer transferable skill training and a highly supportive work experience.</p>
+            <h3>What We Expect</h3>
+            <ul style="margin: 1rem 0 2rem 2rem;">
+                <li><strong>Servant Attitude:</strong> Recognizing that our work is more than just a job. While you do not need to share our Christian faith, we expect all team members to approach their work with a desire to bless our clients, uplift coworkers, and support their own families through honorable, dedicated labor.</li>
+                <li><strong>Excellence:</strong> Taking deep pride in executing every detail to the highest standard.</li>
+                <li><strong>Integrity:</strong> Doing the right thing, operating with total transparency, and honoring our commitments, especially when no one is watching.</li>
+                <li><strong>Lifelong Growth:</strong> Bringing a self-motivated desire to improve. We want team members who are always looking for the next best way to do things, growing both professionally in the field and personally in their daily lives.</li>
+            </ul>
+        </div>
+        <div>
+            <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+                <h2>Submit Your Application</h2>
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                <label class="form-label" for="name">Full Name</label>
+                <input id="name" type="text" name="name" placeholder="Full Name" required>
+                <label class="form-label" for="email">Email Address</label>
+                <input id="email" type="email" name="email" placeholder="Email Address" required>
+                <label class="form-label" for="phone">Phone Number</label>
+                <input id="phone" type="tel" name="phone" placeholder="Phone Number" required>
+                <label class="form-label" for="resume">Upload Resume (PDF/Word, 5 MB max)</label>
+                <input id="resume" type="file" name="attachment" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+                <p class="file-hint">Accepted formats: PDF, Word (.doc, .docx). Maximum file size: 5 MB.</p>
+                <button type="submit" class="btn">Apply Now</button>
+            </form>
+            <script>
+                (function () {
+                    var resume = document.getElementById("resume");
+                    var maxBytes = 5 * 1024 * 1024;
+                    resume.addEventListener("change", function () {
+                        if (resume.files[0] && resume.files[0].size > maxBytes) {
+                            alert("Please choose a resume that is 5 MB or smaller.");
+                            resume.value = "";
+                        }
+                    });
+                })();
+            </script>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Latitude Landscaping &amp; Irrigation LLC</h3>
+            <p>610 W. Hubbard Ave<br>Coeur d’ Alene, ID 83814</p>
+            <p>Phone: <a href="tel:4062704393">(406) 270-4393</a></p>
+            <p class="license-line">AZ ROC: #ABC12345 | ID Contractor Reg: #123456</p>
+            <a href="contact.html" class="btn">Contact Us Online</a>
+        </div>
+    </footer>
+</body>
+</html>
